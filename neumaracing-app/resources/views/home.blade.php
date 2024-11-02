@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Neuma Racing</title>
     <link rel="icon" href="{{asset("img/icono.jpeg")}}" type="image/x-icon"/>
+    <script src="{{ asset('resources/js/carrusel.js') }}"></script>
+    <script src="{{ asset('resources/js/nav.js') }}"></script>
+
     @vite('resources/css/app.css')
 </head>
 <body>
@@ -90,6 +93,26 @@
         </section>
     </div>
 
+    <script>
+        const topBar = document.getElementById("top-bar");
+        const navContainer = document.getElementById("nav-container");
+        let lastScrollTop = 0;
+
+        window.addEventListener("scroll", () => {
+            let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+            if (scrollTop > 0) {
+                topBar.style.transform = "translateY(-100%)"; // Oculta el top-bar al hacer scroll
+                navContainer.style.top = "0"; // Fija el nav-container en la parte superior
+            } else {
+                topBar.style.transform = "translateY(0)"; // Muestra el top-bar
+                navContainer.style.top = "36px"; // Coloca el nav-container debajo del top-bar
+            }
+
+            lastScrollTop = scrollTop;
+        });
+    </script>
+
     <!-- Sección de Bienvenida -->
     <section class="relative bg-gray-100 mt-[210px]"> <!-- Ajusta este valor según el espacio necesario -->
         <div class="relative z-10 container mx-auto py-24 flex flex-col items-center text-center">
@@ -125,6 +148,32 @@
                             <img src="{{asset("img/westlake.jpg")}}" alt="Imagen 4" class="w-full h-full object-cover">
                         </div>
                     </div>
+
+                    <script>
+                        let currentIndex = 0;
+    
+                        function moveSlide(direction) {
+                            const carousel = document.getElementById('carouselSlides');
+                            const slides = carousel.children;
+                            const totalSlides = slides.length;
+                            
+                                    // Ajustar el índice si es menor o mayor que la cantidad de slides
+                            currentIndex += direction;
+                            if (currentIndex < 0) {
+                                currentIndex = totalSlides - 1;
+                            } else if (currentIndex >= totalSlides) {
+                                currentIndex = 0;
+                            }
+                            
+                                    // Mover el carrusel usando translateX
+                            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+                        }
+                            
+                                // Cambio automático de diapositiva cada 4 segundos
+                        setInterval(() => {
+                            moveSlide(1);
+                        }, 4000);
+                    </script>
             
                     <!-- Botones de Navegación -->
                     <button onclick="moveSlide(-1)" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full hover:bg-gray-700">
@@ -135,7 +184,7 @@
                     </button>
                 </div>
             </div>
-
+            
             <div class="mt-10 space-x-6">
                 <a href="#" class="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg text-lg transition">
                     Ver Productos
@@ -147,53 +196,6 @@
         </div>
     </section>
 
-    <!-- JavaScript para el Carrusel -->
-    <script>
-        let currentIndex = 0;
-    
-        function moveSlide(direction) {
-            const carousel = document.getElementById('carouselSlides');
-            const slides = carousel.children;
-            const totalSlides = slides.length;
-    
-            // Ajustar el índice si es menor o mayor que la cantidad de slides
-            currentIndex += direction;
-            if (currentIndex < 0) {
-                currentIndex = totalSlides - 1;
-            } else if (currentIndex >= totalSlides) {
-                currentIndex = 0;
-            }
-    
-            // Mover el carrusel usando translateX
-            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
-    
-        // Cambio automático de diapositiva cada 4 segundos
-        setInterval(() => {
-            moveSlide(1);
-        }, 4000);
-    </script>
-
-    <!-- JavaScript para manejar el scroll y fijar el nav en la parte superior -->
-    <script>
-        const topBar = document.getElementById("top-bar");
-        const navContainer = document.getElementById("nav-container");
-        let lastScrollTop = 0;
-
-        window.addEventListener("scroll", () => {
-            let scrollTop = window.scrollY || document.documentElement.scrollTop;
-
-            if (scrollTop > 0) {
-                topBar.style.transform = "translateY(-100%)"; // Oculta el top-bar al hacer scroll
-                navContainer.style.top = "0"; // Fija el nav-container en la parte superior
-            } else {
-                topBar.style.transform = "translateY(0)"; // Muestra el top-bar
-                navContainer.style.top = "36px"; // Coloca el nav-container debajo del top-bar
-            }
-
-            lastScrollTop = scrollTop;
-        });
-    </script>
 <footer class="bg-black text-white py-8">
     <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-start md:space-x-16">
         
@@ -254,7 +256,5 @@
         </div>
     </div>
 </footer>
-
-
 </body>
 </html>
