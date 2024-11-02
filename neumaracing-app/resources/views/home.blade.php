@@ -202,16 +202,16 @@
         <!-- Social Media Icons Section -->
         <div class="flex space-x-6 mb-8 md:mb-0">
             <a href="#" aria-label="Twitter" class="text-gray-400 hover:text-white transition">
-                <img src="{{ asset('img/twitter.svg') }}" alt="Twitter" class="h-6 w-6">
+                <img src="{{ asset('imagenes/twitter.png') }}" alt="Twitter" class="h-6 w-6">
             </a>
             <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-white transition">
-                <img src="{{ asset('img/instagram.svg') }}" alt="Instagram" class="h-6 w-6">
+                <img src="{{ asset('imagenes/instagram.png') }}" alt="Instagram" class="h-6 w-6">
             </a>
             <a href="#" aria-label="YouTube" class="text-gray-400 hover:text-white transition">
-                <img src="{{ asset('img/youtube.svg') }}" alt="YouTube" class="h-6 w-6">
+                <img src="{{ asset('imagenes/youtube.png') }}" alt="YouTube" class="h-6 w-6">
             </a>
             <a href="#" aria-label="LinkedIn" class="text-gray-400 hover:text-white transition">
-                <img src="{{ asset('img/linkedin.svg') }}" alt="LinkedIn" class="h-6 w-6">
+                <img src="{{ asset('imagenes/linkedin.png') }}" alt="LinkedIn" class="h-6 w-6">
             </a>
         </div>
 
