@@ -21,7 +21,7 @@
     <!-- Nav Principal -->
     <nav id="main-nav" class="bg-black text-white flex items-center justify-between px-6 py-4">
         <div class="flex items-center space-x-4">
-            <a href="#">
+            <a href="{{ route('home') }}">
                 <img src="{{ asset('img/logos/LogoNav.png') }}" alt="Neuma Racing" class="h-12">
             </a>
         </div>
@@ -55,26 +55,27 @@
     <!-- Sección de Filtros, pegada al Nav Principal -->
     <section id="filters-section" class="bg-white border-t border-b border-gray-400">
         <div class="grid grid-cols-4 gap-0">
-            <a href="#" class="flex flex-col items-center justify-center relative group transition-all duration-300 h-24 bg-white hover:bg-gray-100">
+            <a href="{{ route('automovil.index') }}" class="flex flex-col items-center justify-center relative group transition-all duration-300 h-24 bg-white hover:bg-gray-100">
                 <img src="{{ asset('img/icons/automovil.png') }}" alt="Automóvil" class="h-12 w-12">
                 <span class="mt-2 text-black font-semibold">AUTOMÓVIL</span>
                 <span class="absolute bottom-0 left-0 w-full h-1 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
             </a>
-            <a href="#" class="flex flex-col items-center justify-center relative group transition-all duration-300 h-24 bg-white hover:bg-gray-100">
+            <a href="{{ route('suvcrossover.index') }}" class="flex flex-col items-center justify-center relative group transition-all duration-300 h-24 bg-white hover:bg-gray-100">
                 <img src="{{ asset('img/icons/suv.png') }}" alt="Automóvil" class="h-12 w-12">
                 <span class="mt-2 text-black font-semibold">SUV / CROSSOVER</span>
                 <span class="absolute bottom-0 left-0 w-full h-1 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
             </a>
-            <a href="#" class="flex flex-col items-center justify-center relative group transition-all duration-300 h-24 bg-white hover:bg-gray-100">
+            <a href="{{ route('camionetas.index') }}" class="flex flex-col items-center justify-center relative group transition-all duration-300 h-24 bg-white hover:bg-gray-100">
                 <img src="{{ asset('img/icons/camioneta.png') }}" alt="Automóvil" class="h-12 w-12">
                 <span class="mt-2 text-black font-semibold">CAMIONETAS</span>
                 <span class="absolute bottom-0 left-0 w-full h-1 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
             </a>
-            <a href="#" class="flex flex-col items-center justify-center relative group transition-all duration-300 h-24 bg-white hover:bg-gray-100">
+            <a href="{{ route('vans.index') }}" class="flex flex-col items-center justify-center relative group transition-all duration-300 h-24 bg-white hover:bg-gray-100">
                 <img src="{{ asset('img/icons/vans.png') }}" alt="Automóvil" class="h-12 w-12">
                 <span class="mt-2 text-black font-semibold">VANS / COMERCIALES LIGEROS</span>
                 <span class="absolute bottom-0 left-0 w-full h-1 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
             </a>
         </div>
     </section>
+    @vite('resources/js/scroll.js')
 </div>

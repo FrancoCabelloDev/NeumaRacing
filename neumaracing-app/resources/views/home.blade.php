@@ -69,7 +69,6 @@
 <!-- Footer componente -->
 <x-footer></x-footer>
 
-@vite('resources/js/scroll.js')
 @vite("resources/js/carrusel.js")
 </body>
 </html>
