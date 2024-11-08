@@ -8,7 +8,7 @@ use App\Http\Controllers\CamionetasController;
 use App\Http\Controllers\VansController;
 
 
-Route::get('/', [HomeController::class, "index"])->name("home");
+Route::get('/inicio', [HomeController::class, "index"])->name("home");
 Route::get('/automovil', [AutomovilController::class, 'index'])->name('automovil.index');
 Route::get('/suvcrossover', [SuvCrossoverController::class, 'index'])->name('suvcrossover.index');
 Route::get('/camionetas', [CamionetasController::class, 'index'])->name('camionetas.index');

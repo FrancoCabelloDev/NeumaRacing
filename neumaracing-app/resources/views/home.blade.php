@@ -7,6 +7,7 @@
     <title>Neuma Racing</title>
     <link rel="icon" href="{{asset("img/logos/icono.jpeg")}}" type="image/x-icon"/>
     @vite('resources/css/app.css')
+
 </head>
 <body>
     <!-- Nav Principal Componente -->
@@ -24,7 +25,7 @@
             </p>
     
             <!-- Carrusel de Imágenes -->
-            <div class="w-full max-w-4xl mx-auto py-8">
+            <div class="w-full max-w-8xl mx-auto py-8">
         
                 <div class="relative overflow-hidden rounded-lg shadow-lg">
                     <!-- Carrusel de Imágenes -->
@@ -66,6 +67,80 @@
             </div>
         </div>
     </section>
+    <!-- Expositor de Productos -->
+    <div class="border-t border-gray-200">
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Productos Destacados</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Producto 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://via.placeholder.com/150" alt="Producto 1" class="w-full h-40 object-cover rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Batería Enerjet</h3>
+                    <p class="text-gray-600">Batería de alta durabilidad y rendimiento.</p>
+                    <p class="text-green-600 font-bold mt-2">$75.00</p>
+                    <div class="flex space-x-4 mt-4">
+                        <!-- Cambia el botón por una imagen -->
+                        <img src="img\icons\carritocompras.png" alt="Añadir al carrito" class="cursor-pointer w-8 h-8" onclick="añadirAlCarrito()">
+                        <button class="flex-1 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://via.placeholder.com/150" alt="Producto 2" class="w-full h-40 object-cover rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Llanta Triangle</h3>
+                    <p class="text-gray-600">Llanta todo terreno, ideal para uso rudo.</p>
+                    <p class="text-green-600 font-bold mt-2">$120.00</p>
+                    <div class="flex space-x-4 mt-4">
+                    <img src="img\icons\carritocompras.png" alt="Añadir al carrito" class="cursor-pointer w-8 h-8" onclick="añadirAlCarrito()">
+                        <button class="flex-1 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://via.placeholder.com/150" alt="Producto 3" class="w-full h-40 object-cover rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Llanta Dunlop</h3>
+                    <p class="text-gray-600">Llanta de rendimiento superior en carretera.</p>
+                    <p class="text-green-600 font-bold mt-2">$145.00</p>
+                    <div class="flex space-x-4 mt-4">
+                    <img src="img\icons\carritocompras.png" alt="Añadir al carrito" class="cursor-pointer w-8 h-8" onclick="añadirAlCarrito()">
+                        <button class="flex-1 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Producto 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://via.placeholder.com/150" alt="Producto 4" class="w-full h-40 object-cover rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Llanta Westlake</h3>
+                    <p class="text-gray-600">Llanta resistente para caminos difíciles.</p>
+                    <p class="text-green-600 font-bold mt-2">$110.00</p>
+                    <div class="flex space-x-4 mt-4">
+                        <img src="img\icons\carritocompras.png" alt="Añadir al carrito" class="cursor-pointer w-8 h-8" onclick="añadirAlCarrito()">
+                        <button class="flex-1 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    function añadirAlCarrito() {
+        // Código para añadir el producto al carrito
+        alert("Producto añadido al carrito.");
+    }
+</script>
+
 <!-- Footer componente -->
 <x-footer></x-footer>
 
